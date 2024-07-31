@@ -1,0 +1,155 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Add a new reminder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Add a new reminder</h1>
+        <form action="/new" method="POST" class="mt-5">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-control " required>
+            </div>
+            <div class="form-group">
+                <label for="dueDate">Due Date:</label>
+                <input type="date" id="dueDate" name="dueDate" class="form-control" required>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </form>
+    </div>
+    <!-- Add Bootstrap JS and its dependencies -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Reminder</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Add New Reminder</h1>
+    <form method="post" action="/new">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="dueDate">Due Date</label>
+        <input type="date" class="form-control" id="dueDate" name="dueDate" required>
+      </div>
+      <div class="form-group">
+        <label for="cost">Cost</label>
+        <input type="number" class="form-control" id="cost" name="cost" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Reminder</button>
+    </form>
+  </div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Reminder</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style1.css">
+  <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+</head>
+<body>
+  <div class="container mt-5 tt">
+    <h1 class="text-center mb-4">Add New Reminder</h1>
+    <form method="post" action="/new">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="dueDate">Due Date</label>
+        <input type="date" class="form-control" id="dueDate" name="dueDate" required>
+      </div>
+      <div class="form-group">
+        <label for="cost">Cost</label>
+        <input type="number" class="form-control" id="cost" name="cost" required>
+      </div>
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select class="form-control" id="category" name="category">
+          <option value="Rent">Rent</option>
+          <option value="Utilities">Utilities</option>
+          <option value="Subscriptions">Subscriptions</option>
+          <!-- Add more options as needed -->
+        <!-- </select>
+      </div>
+      <div class="form-group">
+        <label for="recurring">Recurring Payment</label>
+        <input type="checkbox" id="recurring" name="recurring">
+      </div>
+      <div class="form-group">
+        <label for="notificationPreferences">Notification Preferences</label>
+        <select class="form-control" id="notificationPreferences" name="notificationPreferences">
+          <option value="email">Email</option>
+          <option value="sms">SMS</option>
+          <option value="appNotification">App Notification</option>
+          <!-- Add more options as needed -->
+        <!-- </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Reminder</button>
+    </form>
+  </div>
+</body>
+</html>   -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Reminder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+<div class="container mt-5">
+        <h1 class="text-center mb-4">Add New Reminder</h1>
+        <form method="post" action="/reminder/recurring">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="dueDate">Due Date</label>
+                <input type="date" class="form-control" id="dueDate" name="dueDate" required>
+            </div>
+            <div class="form-group">
+                <label for="cost">Cost</label>
+                <input type="number" class="form-control" id="cost" name="cost" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select class="form-control" id="category" name="category">
+                    <option value="Housing">Housing</option>
+                    <option value="Utilities">Utilities</option>
+                    <option value="Health">Health</option>
+                    <option value="Rent">Rent</option>
+                </select>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="recurring" name="recurring">
+                <label class="form-check-label" for="recurring">Recurring</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Reminder</button>
+        </form>
+    </div>
+</body>
+</html>
+

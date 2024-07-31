@@ -1,0 +1,35 @@
+body
+{   background-color: #071a3e;
+    font-weight: bold;
+     background-image: url('bg1.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      font-family:rubik;
+}
+.action-buttons {
+    display: flex;
+  }
+  .action-buttons form {
+    margin-right: 5px;
+    max-width: 100px;
+  }
+  input{
+    font-weight: bold;
+  }
+  .container {
+    background-color: rgba(239, 162, 162, 0.8); /* Add a semi-transparent white background to the container for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    background: transparent;
+  }
+  .tt{
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #aaacb1;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    color:white;
+    font-family: rubik;
+  }

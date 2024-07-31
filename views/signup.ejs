@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+  <link href="style1.css" rel="stylesheet">
+  <style>
+    .container{
+      max-width:400px;
+     border: 5px solid bisque;
+     border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-5 text-center">Sign Up</h1>
+    <form action="/signup" method="POST" class="mt-4">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="fullName">Full Name:</label>
+        <input type="text" class="form-control" id="fullName" name="fullName" required>
+      </div>
+      <button type="submit" class="btn btn-success">Sign Up</button>
+    </form>
+  </div>
+  <!-- Bootstrap JS (Optional) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        body{
+       font-family: rubik;
+        }
+    </style>  
+</head>
+<body>
+     <div class="container mt-5">
+        <h1 class="text-center mb-4">Reminder Details</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><%= reminder.name %></h5>
+                <p class="card-text"><strong>Due Date:</strong> <%= reminder.dueDate %></p>
+                <p class="card-text"><strong>Cost:</strong> Rs.<%= reminder.cost.toFixed(2) %></p>
+                <p class="card-text"><strong>Category:</strong> <%= reminder.category %></p>
+                <p class="card-text"><strong>Recurring:</strong> <%= reminder.recurring ? 'Yes' : 'No' %></p>
+                <a href="/reminders" class="btn btn-primary">Back to Reminders</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

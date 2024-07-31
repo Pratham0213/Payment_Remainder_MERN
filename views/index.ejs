@@ -1,0 +1,245 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Reminder App</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style1.css">
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4 ">Payment Reminder</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>`
+          <th scope="col">Name</th>
+          <th scope="col">Due Date</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% reminders.forEach(reminder => { %>
+          <tr>
+            <td><%= reminder.id %></td>
+            <td><%= reminder.name %></td>
+            <td><%= reminder.dueDate %></td>
+            <td class="action-buttons">
+              <form method="post" action="/complete/<%= reminder.id %>?_method=PUT" class="mr-1">
+                  <input type="hidden" name="_method" value="PUT">
+                  <button type="submit" class="btn btn-success btn-sm">Complete</button>
+              </form>
+              <form method="post" action="/delete/<%= reminder.id %>?_method=DELETE">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+              </form>                
+          </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <a href="/new" class="btn btn-primary">Add New Reminder</a>
+  </div>
+</body>
+</html>
+ -->
+
+<!-- <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Payment Reminder App</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="style1.css">
+   <style>
+     .action-buttons {
+       display: flex;
+     }
+     .action-buttons form {
+       margin-right: 5px;
+     }
+   </style>
+ </head>
+ <body>
+   <div class="container mt-5">
+     <h1 class="text-center mb-4">Payment Reminder</h1>
+     <table class="table">
+       <thead>
+         <tr>
+           <th scope="col">ID</th>
+           <th scope="col">Name</th>
+           <th scope="col">Due Date</th>
+           <th scope="col">Invoice</th>
+           <th scope="col">Actions</th>
+         </tr>
+       </thead>
+       <tbody>
+         <% reminders.forEach(reminder => { %>
+           <tr>
+             <td><%= reminder.id %></td>
+             <td><%= reminder.name %></td>
+             <td><%= reminder.dueDate %></td>
+             <td><%= reminder.cost.toFixed(2) %></td>
+             <td class="action-buttons">
+               <form method="post" action="/complete/<%= reminder.id %>?_method=PUT">
+                 <input type="hidden" name="_method" value="PUT">
+                 <button type="submit" class="btn btn-success btn-sm">Complete</button>
+               </form>
+               <form method="post" action="/delete/<%= reminder.id %>?_method=DELETE">
+                 <input type="hidden" name="_method" value="DELETE">
+                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+               </form>                
+             </td>
+           </tr>
+         <% }) %>
+       </tbody>
+     </table>
+     <a href="/new" class="btn btn-primary">Add New Reminder</a>
+     <a href="/print" class="btn btn-secondary">Print Bills</a> <!-- Add Print button -->
+<!-- </div>
+ </body>
+ </html>
+ --------------------------------------------------------------------------------------------------------------------- -->
+<!-- <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Reminder App</title>
+    <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style1.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Payment Reminder</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Due Date</th>
+            <th scope="col">Category</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% reminders.forEach(reminder => { %>
+            <tr>
+              <td><%= reminder.id %></td>
+              <td><%= reminder.name %></td>
+              <td><%= reminder.dueDate %></td>
+              <td><%= reminder.category %></td>
+              <td class="action-buttons">
+                <form method="post" action="/complete/<%= reminder.id %>?_method=PUT" class="mr-1">
+                  <input type="hidden" name="_method" value="PUT">
+                  <button type="submit" class="btn btn-success btn-sm">Complete</button>
+                </form>
+                <form method="post" action="/delete/<%= reminder.id %>?_method=DELETE">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>                
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <a href="/new" class="btn btn-primary">Add New Reminder</a>
+      <a href="/print" class="btn btn-secondary">Print Bills</a>
+    </div>
+  </body>
+  </html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Reminder App</title>
+  <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Payment Reminder</h1>
+    <!-- Reminder Sorting and Filtering Form -->
+    <form action="/reminders" method="GET" class="mb-4">
+      <div class="form-row">
+        <div class="col">
+          <select class="form-control" name="sortBy">
+            <option value="name">Sort by Name</option>
+            <option value="dueDate">Sort by Due Date</option>
+            <option value="category">Sort by Category</option>
+          </select>
+        </div>
+        <div class="col">
+          <select class="form-control" name="filterBy">
+            <option value="">Filter by Category</option>
+            <option value="Housing">Housing</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Health">Health</option>
+          </select>
+        </div>
+        <div class="col">
+          <button type="submit" class="btn btn-primary">Apply Filters</button>
+          <!-- <a href="/login" class="btn btn-success">Login</a>
+                      <a href="/signup" class="btn btn-success">Signup</a> -->
+        </div>
+      </div>
+    </form>
+    <!-- Display Reminders -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Due Date</th>
+          <th scope="col">Category</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% reminders.forEach(reminder=> { %>
+          <tr>
+            <td>
+              <%= reminder.id %>
+            </td>
+            <td>
+              <%= reminder.name %>
+            </td>
+            <td>
+              <%= reminder.dueDate %>
+            </td>
+            <td>
+              <%= reminder.category %>
+            </td>
+
+            <td class="action-buttons">
+              <!-- <form method="post" action="/complete/<%= reminder.id %>?_method=PUT" class="mr-1">
+                              <input type="hidden" name="_method" value="PUT">
+                              <button type="submit" class="btn btn-success btn-sm">Details</button>
+                            </form>  -->
+              <form> <a href="/reminder/<%= reminder.id %>" class="btn btn-info btn-sm">View Details</a>
+              </form>
+
+              <form method="post" action="/delete/<%= reminder.id %>?_method=DELETE">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+              </form>
+
+            </td>
+          </tr>
+          <% }) %>
+      </tbody>
+    </table>
+    <a href="/new" class="btn btn-primary">Add New Reminder</a>
+    <a href="/print" class="btn btn-success">Print Bills</a>
+  </div>
+</body>
+
+</html>
